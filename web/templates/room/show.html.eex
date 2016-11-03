@@ -1,0 +1,10 @@
+<h1>show room</h1>
+<h5 >room <%= @room.id %></h5>
+<h5 >room <%= @room.name %></h5>
+<h5 >room <%= @room.flag %></h5>
+<h5 >room <%= @room.user %></h5>
+
+<div id="show-room" data-room-id=<%= @room.id %> data-flag=<%= @room.flag %> ></div>
+
+<video id="localVideo" autoplay muted="true"> </video>
+<video id="remoteVideo" autoplay > </video>

@@ -1,0 +1,18 @@
+<h1>rooms index</h1>
+
+
+<table class="table" id="rooms-table">
+  <%= for room <- @rooms do %>
+        <tr  >
+          <td> <%= room.id %>  </td>
+          <td> <%= room.name %>  </td>
+          <td> <%= room.flag %>  </td>
+          <td> <%= room.user %> </td>
+          <td class="text-right">
+            <%= link "Delete", to: room_path(@conn, :delete, room),  method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+            <%= link "Join", to: room_path(@conn, :show, room, joiner: "true") %>
+          </td>
+        </tr>
+  <% end %>
+
+</table>

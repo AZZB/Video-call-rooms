@@ -1,0 +1,6 @@
+
+
+
+<%= if( @view_template == "show.html" and String.contains?(to_string(@view_module) , "RoomView")) do %>
+  <script> require("web/static/js/room/show")     </script>
+<% end %>
